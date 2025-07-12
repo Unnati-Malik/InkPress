@@ -43,7 +43,7 @@ const Blog = () => {
   const addComment = async (e)=>{
     e.preventDefault();
     try {
-      const {data} = await axios.post('/api/blog/add-comments', {blog: id, name, content});
+      const {data} = await axios.post('/api/blog/add-comment', {blog: id, name, content});
       if(data.success){
         toast.success(data.message)
         setName('')
